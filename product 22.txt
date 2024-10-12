@@ -1,0 +1,18 @@
+Булегенова Сая ИС231(4)
+class Program
+{
+    static void Main(string[] args)
+    {
+        double distance = 400;  // Заданное расстояние для расчета (км)
+
+        // Создаем объект автомобиля
+        Transport car = new Car();
+        Console.WriteLine(car.GetTransportInfo());  // Выводим информацию об автомобиле
+        Console.WriteLine($"Travel time by car: {car.CalculateTravelTime(distance)} hours");  // Расчет времени поездки для автомобиля
+
+        // Создаем объект самолета
+        Transport plane = new Plane();
+        Console.WriteLine(plane.GetTransportInfo());  // Выводим информацию о самолете
+        Console.WriteLine($"Travel time by plane: {plane.CalculateTravelTime(distance)} hours");  // Расчет времени поездки для самолета
+    }
+}

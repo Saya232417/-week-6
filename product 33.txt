@@ -1,0 +1,8 @@
+Булегенова Сая ИС231(4)
+mono /tmp/1ToRpLvoc6.exe
+Transport: Car, Average Speed: 80 km/h
+Travel time by car: 5 hours
+Transport: Plane, Average Speed: 600 km/h
+Travel time by plane: 0.666666666666667 hours
+
+=== Code Execution Successful ===

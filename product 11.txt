@@ -1,0 +1,47 @@
+Булегенова Сая ИС231(4)
+using System;
+
+// Абстрактный класс Transport, который будет базовым для всех транспортных средств
+public abstract class Transport
+{
+    // Абстрактный метод для расчета времени поездки на основе расстояния
+    public abstract double CalculateTravelTime(double distance);
+
+    // Абстрактный метод для получения информации о транспортном средстве
+    public abstract string GetTransportInfo();
+}
+
+// Класс Car, который наследует от Transport
+public class Car : Transport
+{
+    private double AverageSpeed = 80; // Средняя скорость автомобиля (км/ч)
+
+    // Реализация абстрактного метода для расчета времени поездки для автомобиля
+    public override double CalculateTravelTime(double distance)
+    {
+        return distance / AverageSpeed;  // Расчет времени поездки = расстояние / скорость
+    }
+
+    // Реализация абстрактного метода для получения информации о транспортном средстве
+    public override string GetTransportInfo()
+    {
+        return "Transport: Car, Average Speed: 80 km/h";  // Возвращаем информацию об автомобиле
+    }
+}
+// Класс Plane, который наследует от Transport
+public class Plane : Transport
+{
+    private double AverageSpeed = 600;  // Средняя скорость самолета (км/ч)
+
+    // Реализация абстрактного метода для расчета времени поездки для самолета
+    public override double CalculateTravelTime(double distance)
+    {
+        return distance / AverageSpeed;  // Расчет времени поездки = расстояние / скорость
+    }
+
+    // Реализация абстрактного метода для получения информации о транспортном средстве
+    public override string GetTransportInfo()
+    {
+        return "Transport: Plane, Average Speed: 600 km/h";  // Возвращаем информацию о самолете
+    }
+}
